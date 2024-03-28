@@ -19,7 +19,6 @@
     "react-time-picker": "^6.0.4",
     "short-unique-id": "^4.4.4",
     "shortid": "^2.2.16",
-    "sweetalert2-react": "^0.8.3",
     "web-vitals": "^2.1.4",
     "with-router": "^1.0.1"
   },
