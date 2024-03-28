@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swal from "sweetalert2";
-import { useHistory } from 'react-router';
-import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css"
 
 export default function EditPackage() {
@@ -112,10 +110,6 @@ export default function EditPackage() {
                 })
         }
 
-    }
-
-    const goBack = () => {
-        window.location = "/budget"
     }
 
     return (
