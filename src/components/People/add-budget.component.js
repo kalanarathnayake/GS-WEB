@@ -15,7 +15,7 @@ export default function AddPackage() {
             cost: cost,
         }
         console.log(budget);
-        if (budget.budgetName.length <= 3 || !budget.department) {
+        if (budget.budgetName.len-gth <= 3 || !budget.department) {
             Swal.fire({
                 icon: 'error',
                 title: 'Error',

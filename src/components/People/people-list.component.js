@@ -10,7 +10,7 @@ export default function PeopleList() {
     const [filteredResults, setFilteredResults] = useState([]);
     const [APIData, setAPIData] = useState([]);
     const [showModal, setShowModal] = useState(false);
-    const [birthdate, setBirthDate] = useState('');
+    // const [birthdate, setBirthDate] = useState('');
 
     useEffect(() => {
         axios.get(`http://localhost:5000/people/`)
@@ -250,7 +250,7 @@ export default function PeopleList() {
                                         </div>
                                         <div>
                                             {data.dob.toString().split('T')[0]}
-                                            {setBirthDate(data.dob.toString().split('T')[0])}
+                                            {/* {setBirthDate(data.dob.toString().split('T')[0])} */}
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
