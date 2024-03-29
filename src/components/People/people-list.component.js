@@ -533,60 +533,18 @@ export default function PeopleList() {
                                         {/* search list */}
                                         {searchInput.length > 1 ? (
                                             filteredResults.map((data) => {
-                                                if (searchInput) {
-                                                    return (
-                                                        <tr className='bg-white font-bold text-black border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
-                                                            <td className='px-3 py-2'>
-                                                                <div class="flex justify-center">
-                                                                    <div class="">
-                                                                        <button className='max-h-12 min-w-14 border-2 self-center text-3xl rounded-3xl text-white duration-100 bg-green-500 hover:bg-red-200' onClick={toggleModal}>
-                                                                            <div class="hover:text-black duration-100">
-                                                                                <div class="justify-center ">
-                                                                                    <p className=''>
-                                                                                        👁️
-                                                                                    </p>
-                                                                                </div>
-                                                                                {/* <div class="">
-                                                                                View
-                                                                            </div> */}
-                                                                            </div>
-                                                                        </button>
-                                                                        <Modal show={showModal} handleClose={closeModal} data={data} />
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td className='px-6 py-4 table-auto'>{data.fullName}</td>
-
-                                                            <td className='px-6 py-4'>{data.nic}</td>
-                                                            {/* <td className='px-6 py-4'>{data.dob.toString().split('T')[0]}</td> */}
-                                                            {/* <td className='px-6 py-4'>{data.age}</td> */}
-
-                                                            <div>
-
-                                                            </div>
-
-                                                        </tr>
-                                                    )
-                                                }
-                                            })
-                                        ) : (
-                                            APIData.map((data) => {
-
                                                 return (
                                                     <tr className='bg-white font-bold text-black border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
                                                         <td className='px-3 py-2'>
-                                                            <div class="flex justify-center">
-                                                                <div class="">
+                                                            <div className="flex justify-center">
+                                                                <div className="">
                                                                     <button className='max-h-12 min-w-14 border-2 self-center text-3xl rounded-3xl text-white duration-100 bg-green-500 hover:bg-red-200' onClick={toggleModal}>
-                                                                        <div class="hover:text-black duration-100">
-                                                                            <div class="justify-center ">
+                                                                        <div className="hover:text-black duration-100">
+                                                                            <div className="justify-center">
                                                                                 <p className=''>
                                                                                     👁️
                                                                                 </p>
                                                                             </div>
-                                                                            {/* <div class="">
-                                                                                View
-                                                                            </div> */}
                                                                         </div>
                                                                     </button>
                                                                     <Modal show={showModal} handleClose={closeModal} data={data} />
@@ -594,21 +552,46 @@ export default function PeopleList() {
                                                             </div>
                                                         </td>
                                                         <td className='px-6 py-4 table-auto'>{data.fullName}</td>
-
                                                         <td className='px-6 py-4'>{data.nic}</td>
                                                         {/* <td className='px-6 py-4'>{data.dob.toString().split('T')[0]}</td> */}
                                                         {/* <td className='px-6 py-4'>{data.age}</td> */}
-
                                                         <div>
-
                                                         </div>
-
                                                     </tr>
                                                 )
-
+                                            })
+                                        ) : (
+                                            APIData.map((data) => {
+                                                return (
+                                                    <tr className='bg-white font-bold text-black border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
+                                                        <td className='px-3 py-2'>
+                                                            <div className="flex justify-center">
+                                                                <div className="">
+                                                                    <button className='max-h-12 min-w-14 border-2 self-center text-3xl rounded-3xl text-white duration-100 bg-green-500 hover:bg-red-200' onClick={toggleModal}>
+                                                                        <div className="hover:text-black duration-100">
+                                                                            <div className="justify-center ">
+                                                                                <p className=''>
+                                                                                    👁️
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </button>
+                                                                    <Modal show={showModal} handleClose={closeModal} data={data} />
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td className='px-6 py-4 table-auto'>{data.fullName}</td>
+                                                        <td className='px-6 py-4'>{data.nic}</td>
+                                                        {/* <td className='px-6 py-4'>{data.dob.toString().split('T')[0]}</td> */}
+                                                        {/* <td className='px-6 py-4'>{data.age}</td> */}
+                                                        <div>
+                                                        </div>
+                                                    </tr>
+                                                )
                                             })
                                         )}
                                     </tbody>
+
 
 
                                 </table>
