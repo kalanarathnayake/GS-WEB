@@ -213,7 +213,7 @@ export default function PeopleList() {
             <>
                 {show && (
                     <div id="static-modal" data-modal-backdrop="static" tabIndex="-1" aria-hidden="true" className=" fixed overflow-scroll top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-screen bg-gray-800 bg-opacity-80">
-                        <div className="mt-[30rem] relative p-4 max-w-2xl">
+                        <div className="mt-[50rem] relative p-4 max-w-2xl">
                             <div className="relative bg-white rounded-lg shadow">
                                 <div className="flex items-center justify-between p-2 border-b rounded-t">
                                     <h3 className="text-2xl  font-bold text-black ">
@@ -228,7 +228,16 @@ export default function PeopleList() {
                                     </button>
                                 </div>
                                 <div className="p-3">
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
+                                        <div class="">
+                                            NIC
+                                        </div>
+                                        <div>
+                                            {data.nic}
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
                                             Full Name
                                         </div>
@@ -236,7 +245,8 @@ export default function PeopleList() {
                                             {data.fullName}
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <hr />
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
                                             Other Names
                                         </div>
@@ -244,7 +254,8 @@ export default function PeopleList() {
                                             {data.otherName}
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <hr />
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
                                             Birth Date
                                         </div>
@@ -253,7 +264,7 @@ export default function PeopleList() {
                                             {/* {setBirthDate(data.dob.toString().split('T')[0])} */}
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
                                             Age
                                         </div>
@@ -261,7 +272,8 @@ export default function PeopleList() {
                                             {data.age}
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <hr />
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
                                             Job
                                         </div>
@@ -269,7 +281,8 @@ export default function PeopleList() {
                                             {data.job}
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <hr />
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
                                             Address
                                         </div>
@@ -277,16 +290,18 @@ export default function PeopleList() {
                                             {data.address}
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <hr />
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
-                                            Special Notes
+                                            S.Notes
                                         </div>
                                         <div>
                                             {data.specialNote}
 
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <hr />
+                                    <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
                                             Talents
                                         </div>
@@ -295,7 +310,7 @@ export default function PeopleList() {
 
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-2 gap-4 pb-1 ">
                                         <div class="">
                                             Gender
                                         </div>
@@ -304,23 +319,26 @@ export default function PeopleList() {
 
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-3 gap-4 bg-[#9cd2ff] p-1 rounded-xl">
+                                    <div className="grid grid-cols-2 gap-4 bg-[#9cd2ff] p-1 rounded-xl">
                                         <div class="">
-                                            Phone Numbers
+                                            P/N
                                         </div>
-                                        <div>
-                                            {data.phoneNum1}
+                                        <div classNamr="pl-10">
+                                            <div>
+                                                {data.phoneNum1}
 
-                                        </div>
-                                        <div>
-                                            {data.phoneNum2}
+                                            </div>
+                                            <div>
+                                                {data.phoneNum2}
 
+                                            </div>
                                         </div>
                                     </div>
+                                    <hr />
                                     <div class=" bg-gray-200 p-2 px-3 mt-2 rounded-xl">
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                අස්වැසුම ආධාර
+                                                අස්වැසුම
                                             </div>
                                             <div className={`${data.aswasuma === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.aswasuma === true ?
@@ -331,9 +349,9 @@ export default function PeopleList() {
 
 
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                වකුගඩු ආධාර
+                                                වකුගඩු
                                             </div>
                                             <div className={`${data.wakugadu === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.wakugadu === true ?
@@ -342,9 +360,9 @@ export default function PeopleList() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                ආබාධිත ආධාර
+                                                ආබාධිත
                                             </div>
                                             <div className={`${data.abaditha === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.abaditha === true ?
@@ -353,9 +371,9 @@ export default function PeopleList() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                වැඩිහිටි ආධාර
+                                                වැඩිහිටි
                                             </div>
                                             <div className={`${data.vadihiti === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.vadihiti === true ?
@@ -364,9 +382,9 @@ export default function PeopleList() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                පිලිකා ආධාර
+                                                පිලිකා
                                             </div>
                                             <div className={`${data.pilika === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.pilika === true ?
@@ -375,9 +393,9 @@ export default function PeopleList() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                අධ්‍යාපන ආධාර
+                                                අධ්‍යාපන
                                             </div>
                                             <div className={`${data.adyapana === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.adyapana === true ?
@@ -386,9 +404,9 @@ export default function PeopleList() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                ශිෂ්‍ය ආධාර
+                                                ශිෂ්‍ය
                                             </div>
                                             <div className={`${data.shishyadhara === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.shishyadhara === true ?
@@ -397,9 +415,9 @@ export default function PeopleList() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                මහජනාධාර ආධාර
+                                                මහජනාධාර
                                             </div>
                                             <div className={`${data.mahajanadara === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.mahajanadara === true ?
@@ -408,9 +426,9 @@ export default function PeopleList() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 pb-1">
                                             <div class="">
-                                                වෙනත් ආධාර
+                                                වෙනත්
                                             </div>
                                             <div className={`${data.wenath === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.wenath === true ?
@@ -436,7 +454,7 @@ export default function PeopleList() {
                                         </div>
                                     </button>
                                     <div class="">
-                                        <Link to='/editBudget'>
+                                        <Link to='/editPerson'>
                                             <button className='inline-flex justify-center items-center pl-5 py-2 ml-1 text-sm font-medium text-white duration-100 bg-blue-700 rounded-md hover:bg-blue-200' onClick={() => setData(data)}>
                                                 <div class=" grid grid-cols-2  hover:text-black duration-200">
                                                     {/* <div class="">
@@ -494,7 +512,7 @@ export default function PeopleList() {
                                         <td className='flex justify-center gap-2 pb-3'>
                                             <div class="flex justify-end sm:flex-row sm:text-left sm:justify-end gap-2">
                                                 <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                                                    <Link className='font-semibold text-white no-underline' to={"/addBudget"}>
+                                                    <Link className='font-semibold text-white no-underline' to={"/createperson"}>
                                                         Add New
                                                     </Link></button>
                                                 <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" onClick={exportPackages}>
