@@ -213,7 +213,7 @@ export default function PeopleList() {
             <>
                 {show && (
                     <div id="static-modal" data-modal-backdrop="static" tabIndex="-1" aria-hidden="true" className=" fixed overflow-scroll top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-screen bg-gray-800 bg-opacity-80">
-                        <div className="mt-[50rem] relative p-4 max-w-2xl">
+                        <div className="mt-[54rem] relative p-4 max-w-2xl">
                             <div className="relative bg-white rounded-lg shadow">
                                 <div className="flex items-center justify-between p-2 border-b rounded-t">
                                     <h3 className="text-2xl  font-bold text-black ">
