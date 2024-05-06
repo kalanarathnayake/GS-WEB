@@ -95,83 +95,62 @@ export default function AddPerson() {
     }
 
     return (
-        <div className="flex flex-col px-5 py-32 pt-2 scroll-m-1 scroll-smooth ">
-            <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-                    <div className='items-center overflow-hidden'>
-                        <div className=''>
-                            <div class="grid grid-cols-1 gap-4 content-start pt-5 px-20">
-                                <form className='px-12 py-12 border-2 rounded-lg shadow-md bg-gray-50' >
-                                    <div class="">
-                                        <p className='text-4xl font-semibold text-black uppercase'>Create Budget</p>
-                                        <p />
-                                        <div className="grid grid-cols-2 gap-4 form-group">
-                                            <div className="form-group">
-                                                <label className='block mb-2 text-lg font-medium text-gray-900 '>
-                                                    Budget Name
-                                                </label>
-                                                <input type="text"
-                                                    placeholder='Please Enter Name'
-                                                    required
-                                                    className="form-control"
-                                                    onChange={(e) => setBudgetName(e.target.value)}
-                                                />
-                                            </div>
-                                            <div class="">
-                                                <label className='block mb-2 text-lg font-medium text-gray-900 ' >
-                                                    Department
-                                                </label>
-                                                <input type="text"
-                                                    placeholder='Please Enter Department Name'
-                                                    required
-                                                    className="form-control"
-                                                    onChange={(e) => setDepartment(e.target.value)}
-                                                />
-                                            </div>
-                                        </div>
-                                        <p />
-                                        <div className="grid grid-cols-1 gap-4 form-group">
-                                            <div className="">
-                                                <label className='block mb-2 text-lg font-medium text-gray-900 '>
-                                                    Amount
-                                                </label>
-                                                <input type="number"
-                                                    placeholder='Please Enter Amount'
-                                                    required
-                                                    className="form-control"
-                                                    onChange={(e) => setCost(e.target.value)}
-                                                />
-                                            </div>
-                                        </div>
-                                        <p />
-                                        <div className="text-center align-middle form-group">
-                                            <input className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' type="submit" value="Create" onClick={postData} />
-                                        </div>
-                                    </div>
-                                </form>
-
-                                <form class="max-w-sm mx-auto">
-                                    <div class="mb-5">
-                                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
-                                    </div>
-                                    <div class="mb-5">
-                                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                                        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                                    </div>
-                                    <div class="flex items-start mb-5">
-                                        <div class="flex items-center h-5">
-                                            <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-                                        </div>
-                                        <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                                    </div>
-                                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                                </form>
-                            </div>
+        <div>
+            <form className='px-12 py-12 border-2 rounded-lg shadow-md bg-gray-50' >
+                <div class="">
+                    <p className='text-xl font-semibold text-black'>පුද්ගලයන් ලියාපදිංචි කිරීම </p>
+                    <p />
+                    <div className="grid grid-cols-2 gap-4 form-group">
+                        <div className="form-group">
+                            <label className='block mb-2 text-lg font-medium text-gray-900 '>
+                                Budget Name
+                            </label>
+                            <input type="text"
+                                placeholder='Please Enter Name'
+                                required
+                                className="form-control"
+                                onChange={(e) => setBudgetName(e.target.value)}
+                            />
+                        </div>
+                        <div class="">
+                            <label className='block mb-2 text-lg font-medium text-gray-900 ' >
+                                Department
+                            </label>
+                            <input type="text"
+                                placeholder='Please Enter Department Name'
+                                required
+                                className="form-control"
+                                onChange={(e) => setDepartment(e.target.value)}
+                            />
                         </div>
                     </div>
+                    <p />
+                    <div className="grid grid-cols-1 gap-4 form-group">
+                        <div className="">
+                            <label className='block mb-2 text-lg font-medium text-gray-900 '>
+                                Amount
+                            </label>
+                            <input type="number"
+                                placeholder='Please Enter Amount'
+                                required
+                                className="form-control"
+                                onChange={(e) => setCost(e.target.value)}
+                            />
+                        </div>
+                    </div>
+                    <p />
+                    <div className="text-center align-middle form-group">
+                        <input className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' type="submit" value="Create" onClick={postData} />
+                    </div>
                 </div>
-            </div>
+            </form>
+
+            
         </div>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
     )
 }

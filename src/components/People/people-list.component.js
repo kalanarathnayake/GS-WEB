@@ -272,6 +272,14 @@ export default function PeopleList() {
                                             {data.age}
                                         </div>
                                     </div>
+                                    <div className="grid grid-cols-2 gap-4 pb-1 ">
+                                        <div class="">
+                                            Gender
+                                        </div>
+                                        <div>
+                                            {data.gender}
+                                        </div>
+                                    </div>
                                     <hr />
                                     <div className="grid grid-cols-2 gap-4 pb-1">
                                         <div class="">
@@ -310,15 +318,7 @@ export default function PeopleList() {
 
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4 pb-1 ">
-                                        <div class="">
-                                            Gender
-                                        </div>
-                                        <div>
-                                            {data.gender}
 
-                                        </div>
-                                    </div>
                                     <div className="grid grid-cols-2 gap-4 bg-[#9cd2ff] p-1 rounded-xl">
                                         <div class="">
                                             P/N
@@ -343,7 +343,7 @@ export default function PeopleList() {
                                             <div className={`${data.aswasuma === true ? 'bg-[#42ec3c] applied' : 'bg-[#ffd747] not-applied'} rounded-xl shadow-lg my-1`}>
                                                 {data.aswasuma === true ?
                                                     <p className='text-center text-xl font-bold pt-2 '>ඇත</p> :
-                                                    <p>Not Applied</p>
+                                                    <p className='text-center text-xl font-bold pt-2 '>නැත</p>
                                                 }
                                             </div>
 
@@ -472,22 +472,7 @@ export default function PeopleList() {
                                     </div>
                                     {/* <button onClick={handleClose} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">I accept</button> */}
                                     {/* <button onClick={handleClose} type="button" className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">CLOSE</button> */}
-                                    <div className="">
-                                        <button className='inline-flex items-center pl-5 py-2 ml-1 text-sm font-medium text-white duration-100 bg-red-700 rounded-md hover:bg-blue-200' onClick={() => onDelete(data._id)} closeModal >
-                                            <div class=" grid grid-cols-2 hover:text-black duration-100">
-                                                {/* <div class="">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-                                                    </svg>
 
-
-                                                </div> */}
-                                                <div class="self-center text-lg">
-                                                    Delete
-                                                </div>
-                                            </div>
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -603,6 +588,22 @@ export default function PeopleList() {
                                                         {/* <td className='px-6 py-4'>{data.dob.toString().split('T')[0]}</td> */}
                                                         {/* <td className='px-6 py-4'>{data.age}</td> */}
                                                         <div>
+                                                            <div className="">
+                                                                <button className='inline-flex items-center pl-5 py-2 ml-1 text-sm font-medium text-white duration-100 bg-red-700 rounded-md hover:bg-blue-200' onClick={() => onDelete(data._id)} closeModal >
+                                                                    <div class=" grid grid-cols-2 hover:text-black duration-100">
+                                                                        {/* <div class="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                                    </svg>
+
+
+                                                </div> */}
+                                                                        <div class="self-center text-lg">
+                                                                            Delete
+                                                                        </div>
+                                                                    </div>
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </tr>
                                                 )
